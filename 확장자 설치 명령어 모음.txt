@@ -1,0 +1,57 @@
+🔥 1. 파이썬 개발 필수 확장
+code --install-extension ms-python.python
+code --install-extension ms-python.vscode-pylance
+code --install-extension ms-python.debugpy
+code --install-extension ms-python.black-formatter
+code --install-extension ms-python.autopep8
+code --install-extension ms-python.flake8
+code --install-extension njpwerner.autodocstring
+code --install-extension ms-toolsai.jupyter
+code --install-extension ms-toolsai.jupyter-keymap
+code --install-extension ms-toolsai.jupyter-renderers
+
+🟢 2. JavaScript / React 개발 필수
+code --install-extension dbaeumer.vscode-eslint
+code --install-extension esbenp.prettier-vscode
+code --install-extension dsznajder.es7-react-js-snippets
+code --install-extension formulahendry.auto-rename-tag
+code --install-extension formulahendry.auto-close-tag
+code --install-extension xabikos.javascriptsnippets
+code --install-extension bradlc.vscode-tailwindcss
+code --install-extension styled-components.vscode-styled-components
+
+🔵 3. 백엔드 / API 테스트
+code --install-extension rangav.vscode-thunder-client
+code --install-extension humao.rest-client
+code --install-extension mikestead.dotenv
+code --install-extension redhat.vscode-yaml
+code --install-extension yzhang.markdown-all-in-one
+
+🟣 4. Git 관련 (필수급)
+code --install-extension eamodio.gitlens
+code --install-extension mhutchie.git-graph
+
+🟤 5. DB 개발 관련
+code --install-extension mtxr.sqltools
+code --install-extension mtxr.sqltools-driver-mysql
+code --install-extension mtxr.sqltools-driver-pg
+code --install-extension cweijan.vscode-database-client2
+
+🟡 6. HTML/CSS 편의 확장
+code --install-extension pranaygp.vscode-css-peek
+code --install-extension zignd.html-css-class-completion
+code --install-extension ecmel.vscode-html-css
+
+🟠 7. Docker / DevOps 대비
+code --install-extension ms-azuretools.vscode-docker
+code --install-extension ms-vscode-remote.remote-containers
+
+🧩 8. 생산성 확장 (강력 추천)
+code --install-extension alefragnani.project-manager
+code --install-extension streetsidesoftware.code-spell-checker
+code --install-extension usernamehw.errorlens
+code --install-extension gruntfuggly.todo-tree
+code --install-extension oderwat.indent-rainbow
+
+🇰🇷 9. 한국어 환경 (선택)
+code --install-extension ms-ceintl.vscode-language-pack-ko
