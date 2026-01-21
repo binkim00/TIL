@@ -1,0 +1,183 @@
+- 깃 경로 모아서 찾기
+find . -name ".git" -type d -prune -print | while read d; do
+  repo="$(dirname "$d")"
+  echo "=============================="
+  echo "📁 $repo"
+  (cd "$repo" && git remote -v)
+done
+
+
+🔥 1. 기본 설정 관련 명령어
+Git 최초 설정
+git config --global user.name "이름"
+git config --global user.email "이메일"
+
+
+현재 설정 확인
+
+git config --list
+
+
+특정 설정 확인
+
+git config user.name
+git config user.email
+
+🔥 2. 저장소 생성 / 복제
+저장소 생성
+git init
+
+원격 저장소 복제
+git clone 저장소주소
+
+
+예시
+
+git clone https://github.com/user/repo.git
+
+🔥 3. 파일 상태 확인
+git status
+
+
+👉 현재 작업 디렉토리 상태 확인
+
+🔥 4. 파일 추가 (Staging)
+특정 파일 추가
+git add 파일명
+
+모든 파일 추가
+git add .
+
+변경된 파일만 추가
+git add -u
+
+🔥 5. 커밋 관련
+기본 커밋
+git commit -m "메시지"
+
+추가 후 바로 커밋
+git commit -am "메시지"
+
+마지막 커밋 메시지 수정
+git commit --amend
+
+🔥 6. 로그 확인
+전체 로그
+git log
+
+한 줄로 보기
+git log --oneline
+
+그래프 포함
+git log --graph --oneline
+
+🔥 7. 브랜치 관련
+브랜치 확인
+git branch
+
+새 브랜치 생성
+git branch 브랜치이름
+
+브랜치 이동
+git checkout 브랜치이름
+
+
+또는 최신 방식
+
+git switch 브랜치이름
+
+브랜치 생성 + 이동 한 번에
+git checkout -b 브랜치이름
+
+git switch -c 브랜치이름
+
+브랜치 삭제
+git branch -d 브랜치이름
+
+
+강제 삭제
+
+git branch -D 브랜치이름
+
+🔥 8. 병합 (merge)
+git merge 브랜치이름
+
+
+충돌 해결 후
+
+git add .
+git commit
+
+🔥 9. 원격 저장소 관련
+원격 저장소 추가
+git remote add origin 주소
+
+원격 저장소 확인
+git remote -v
+
+원격 저장소 변경
+git remote set-url origin 새주소
+
+🔥 10. Push / Pull
+업로드
+git push origin 브랜치명
+
+처음 push
+git push -u origin main
+
+내려받기
+git pull
+
+🔥 11. fetch (가져오기만)
+git fetch
+
+🔥 12. 되돌리기 (복구)
+파일 변경 취소
+git checkout -- 파일명
+
+add 취소
+git reset 파일명
+
+커밋 취소
+git reset HEAD~1
+
+강제 롤백
+git reset --hard 커밋해시
+
+🔥 13. stash (임시 저장)
+변경사항 임시 보관
+git stash
+
+stash 목록
+git stash list
+
+복구
+git stash pop
+
+🔥 14. 태그 관리
+git tag v1.0
+git tag
+git push origin v1.0
+
+🔥 15. 리베이스
+git rebase 브랜치명
+
+🔥 16. diff (변경점 비교)
+git diff
+git diff 파일명
+
+🔥 17. 충돌 관련
+git mergetool
+
+🔥 18. 파일 삭제 / 이동
+git rm 파일명
+git mv 기존파일 새파일
+
+🔥 19. 히스토리 조작
+git cherry-pick 커밋해시
+
+git revert 커밋해시
+
+🔥 20. Submodule
+git submodule add 주소
+git submodule update
