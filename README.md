@@ -42,30 +42,47 @@
 
 ### 🐍 Python
 
-#### Basic
+#### Study
 
 - 문법 정리
 - 자료구조
 
-#### practice
+#### Practice
 
 - 직접 생성한 문제 풀이
 
-#### review
+#### Review
 
 - 교육 내용 복습
 
+#### AfterTest
+
+- 시험 내용 복기
+
+<br>
+
 ### 🧠 Algorithm
-#### 각 종류 별 폴더
+#### Problem
 
 - 백준 코딩 문제 풀이
+
+#### Practice
+
+- 강의 후 연습 문제 생성 후 풀이
+
+#### Study
+
 - 알고리즘 개념 정리
 - 문제 접근 방법 기록
+
+<br>
 
 ### 📝 API
 
 - API 사용법
 - API 공부 기록
+
+<br>
 
 ### 🌐 Web
 
@@ -73,11 +90,15 @@
 - React
 - Backend 기초
 
+<br>
+
 ### 🗄 Database
 
 - SQL
 - ERD 설계
 - 데이터 모델링
+
+<br>
 
 ### 추후 자바 추가 예정
 - 예정
