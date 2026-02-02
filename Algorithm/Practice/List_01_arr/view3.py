@@ -17,10 +17,34 @@
 # 0 0 5 7 9 4 3 0 0
 #
 # [출력 예시]
-# #1 5
+# #1 2
 ####################################################
 
 T = int(input())
 for test_case in range(1, T + 1):
     # 여기부터 알고리즘 구현
-    pass
+    N = int(input())
+    h = list(map(int, input().split()))
+    
+    total_point = 0
+
+    for i in range(2, N - 2):
+
+        neighbor_max = max(
+            h[i - 2],
+            h[i - 1],
+            h[i + 1],
+            h[i + 2]
+        )
+
+        view_point = 0
+
+        if h[i] > neighbor_max:
+            view_point = h[i] - neighbor_max
+            if view_point > 5:
+                view_point = 5
+
+        total_point += view_point
+
+    
+    print(f"#{test_case} {total_point}")

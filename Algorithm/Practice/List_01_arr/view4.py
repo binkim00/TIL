@@ -9,6 +9,7 @@
 #
 # 조망권을 가지는 건물의 개수를 출력하시오.
 # (평균은 실수로 계산해도 되고, 정수 비교를 위해 4*h[i] > a+b+c+d로 비교해도 된다.)
+# 실제로는 ‘주변 평균 대비 상대적 돌출 여부’를 묻는 문제
 #
 # [입력 예시]
 # 1
@@ -16,10 +17,25 @@
 # 0 0 3 5 7 4 2 0 0
 #
 # [출력 예시]
-# #1 1
+# #1 3
 ####################################################
 
 T = int(input())
 for test_case in range(1, T + 1):
     # 여기부터 알고리즘 구현
-    pass
+    N = int(input())
+    h = list(map(int, input().split()))
+
+    build_count = 0
+
+    for i in range(2, N - 2):
+
+        a = h[i - 2]
+        b = h[i - 1]
+        c = h[i + 1]
+        d = h[i + 2]
+
+        if h[i] > (a + b + c + d) / 4:
+            build_count += 1
+
+    print(f"#{test_case} {build_count}")

@@ -21,4 +21,22 @@
 T = int(input())
 for test_case in range(1, T + 1):
     # 여기부터 알고리즘 구현
-    pass
+
+    N = int(input())
+    h = list(map(int, input().split()))
+
+    building_count = 0
+
+    for i in range(2, N -2): # i는 인덱스 값인 것을 잊지 말자!
+
+        neighbor_max = max(
+            h[i - 2],
+            h[i - 1],
+            h[i + 1],
+            h[i + 2]
+        )
+
+        if h[i] > neighbor_max: # h[i]가 실제 숫자!
+            building_count += 1
+
+    print(f"#{test_case} {building_count}")
